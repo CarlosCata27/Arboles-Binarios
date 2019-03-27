@@ -18,29 +18,27 @@ Nodo* allocateMem(int dato)
 }
 
 void inOrden (Nodo *top){
-    int i=1;
     if (top != NULL){
         inOrden (top->L);
-        printf("Elemento %d del arbol = %d\n",i,top->dato);
+        printf("Elemento = %d\n",top->dato);
         inOrden(top->R);
+
     }
 }
 
 void preOrden (Nodo *top){
-    int i = 1;
     if (top != NULL){
-        printf("Elemento %d del arbol = %d\n",i,top->dato);
+        printf("Elemento = %d\n",top->dato);
         preOrden (top->L);
         preOrden(top->R);
     }
 }
 
 void postOrden (Nodo *top){
-    int i=1;
     if (top != NULL){
         preOrden (top->L);
         preOrden(top->R);
-        printf("Elemento %d del arbol = %d\n",i,top->dato);
+        printf("Elemento = %d\n",top->dato);
     }
 }
 
