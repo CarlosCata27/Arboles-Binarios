@@ -83,12 +83,34 @@ Nodo *alta(Nodo *top,int dato)
     return top;
 }
 
+void moveleft(Nodo **top)
+{
+    Nodo *a,*p;
+    p=(*top);
+    a=(*top)->L;
+    while(a->R!=NULL)
+    {
+        p=a;
+        a=a->R;
+    }
+    (*top)->dato=a->dato;
+    if(p==(*top))
+    {
+        p->L=a->L;
+    }
+    else
+    {
+        p->R=a->L;
+    }
+    (*top)=a;
+}
+
 void baja(Nodo **top,int dato)
 {
     Nodo *aux;
     if(*(top)==NULL)
     {
-        puts("No existe el dato");
+        puts("El arbol esta vacio");
     }
     else
     {
@@ -103,9 +125,24 @@ void baja(Nodo **top,int dato)
         if(dato==(*top)->dato)
         {
             aux = (*top);
+            if (aux->L==NULL)
+            {
+                (*top)=aux->dato;
+            }
+            else if(aux->R==NULL)
+            {
+                (*top)=aux->L;
+            }
+            else
+            {
+                moveleft(&aux);
+            }
+            free(aux);
         }
     }
 }
+
+
 
 
 
