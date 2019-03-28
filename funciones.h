@@ -22,7 +22,6 @@ void inOrden (Nodo *top){
         inOrden (top->L);
         printf("Elemento = %d\n",top->dato);
         inOrden(top->R);
-
     }
 }
 
@@ -83,5 +82,31 @@ Nodo *alta(Nodo *top,int dato)
     }
     return top;
 }
+
+void baja(Nodo **top,int dato)
+{
+    Nodo *aux;
+    if(*(top)==NULL)
+    {
+        puts("No existe el dato");
+    }
+    else
+    {
+        if(dato<(*top)->dato)
+        {
+            baja(&(*top)->L,dato);
+        }
+        else if(dato>(*top)->dato)
+        {
+            baja(&(*top)->R,dato);
+        }
+        if(dato==(*top)->dato)
+        {
+            aux = (*top);
+        }
+    }
+}
+
+
 
 #endif

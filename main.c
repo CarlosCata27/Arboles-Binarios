@@ -3,7 +3,7 @@
 #include "funciones.h"
 
 int main() {
-    int m,dato;
+    int m,dato,i=1;
     Nodo *tree = NULL;
     do{
         puts("ARBOLES SIN FRUTOS\n"
@@ -33,15 +33,15 @@ int main() {
                 switch (m)
                 {
                     case 1:
-                        preOrden(tree);
+                        preOrden(tree,&i);
                         break;
 
                     case 2:
-                        inOrden(tree);
+                        inOrden(tree,&i);
                         break;
 
                     case 3:
-                        postOrden(tree);
+                        postOrden(tree,&i);
                         break;
 
                     case 0:
