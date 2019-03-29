@@ -10,8 +10,8 @@ int main() {
              "1 >> Altas\n"
              "2 >> Bajas\n"
              "3 >> Mostrar\n"
-             "0 >> Salir\n"
-             "4 >> Tamano del arbol\n");
+             "4 >> Tamano del arbol\n"
+             "0 >> Salir\n");
         scanf("%d",&m);
         switch (m) {
             case 1:
