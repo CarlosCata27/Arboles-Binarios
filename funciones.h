@@ -112,4 +112,13 @@ void baja(Nodo **top,int dato)
         }
     }
 }
+
+int size(Nodo *top)
+{
+    if (top==NULL)
+        return 0; //if the current top is null return a 0 so no add 1 is done
+    else
+        return(size(top->L) + 1 + size(top->R));
+}
+
 #endif
