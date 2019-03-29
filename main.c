@@ -17,10 +17,13 @@ int main() {
             case 1:
                 puts("Inserte el dato a dar de alta\n");
                 scanf("%d",&dato);
-                tree = alta(tree,dato);
+                alta(&tree,dato);
                 break;
 
             case 2:
+                puts("Inserte el dato a dar de baja\n");
+                scanf("%d",&dato);
+                baja(&tree,dato);
                 break;
 
             case 3:
@@ -33,15 +36,15 @@ int main() {
                 switch (m)
                 {
                     case 1:
-                        preOrden(tree,&i);
+                        preOrden(tree);
                         break;
 
                     case 2:
-                        inOrden(tree,&i);
+                        inOrden(tree);
                         break;
 
                     case 3:
-                        postOrden(tree,&i);
+                        postOrden(tree);
                         break;
 
                     case 0:
