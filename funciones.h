@@ -98,7 +98,7 @@ void baja(Nodo **top,int dato)
             aux = (*top);
             if (aux->L==NULL)
             {
-                (*top)=aux->dato;
+                (*top)=aux->R;
             }
             else if(aux->R==NULL)
             {
@@ -116,7 +116,7 @@ void baja(Nodo **top,int dato)
 int size(Nodo *top)
 {
     if (top==NULL)
-        return 0; //if the current top is null return a 0 so no add 1 is done
+        return 0;
     else
         return(size(top->L) + 1 + size(top->R));
 }

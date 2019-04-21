@@ -54,7 +54,7 @@ int main() {
 
             case 4:
                 int t = size(tree);
-                printf("El tamanio del arbol es = %d",t);
+                printf("El tamanio del arbol es = %d\n",t);
                 break;
 
 
