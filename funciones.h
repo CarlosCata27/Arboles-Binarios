@@ -35,8 +35,8 @@ void preOrden (Nodo *top){
 
 void postOrden (Nodo *top){
     if (top != NULL){
-        preOrden (top->L);
-        preOrden(top->R);
+        postOrden (top->L);
+        postOrden(top->R);
         printf("Elemento = %d\n",top->dato);
     }
 }
